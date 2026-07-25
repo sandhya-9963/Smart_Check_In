@@ -1,0 +1,39 @@
+# Virtual Environment
+venv/
+ENV/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite3
+
+# Node modules & build outputs
+node_modules/
+dist/
+build/
+.eslintcache
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+
+# IDEs & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Agent config files
+.gemini/
+.agents/

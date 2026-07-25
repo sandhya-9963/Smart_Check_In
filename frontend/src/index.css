@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-950 text-slate-100 font-sans selection:bg-brand-500 selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0d9488;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Glow Effects */
+.glow-brand {
+  box-shadow: 0 0 40px -10px rgba(13, 148, 136, 0.25);
+}
+
+.glow-red {
+  box-shadow: 0 0 40px -10px rgba(239, 68, 68, 0.25);
+}
+
+.glow-green {
+  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.25);
+}
+
+/* QR Scanner Animation Scan Line */
+@keyframes scan {
+  0%, 100% {
+    top: 5%;
+  }
+  50% {
+    top: 95%;
+  }
+}
+
+.scanner-line {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  height: 3px;
+  background: #2dd4bf;
+  box-shadow: 0 0 12px #2dd4bf;
+  animation: scan 2.5s ease-in-out infinite;
+}
